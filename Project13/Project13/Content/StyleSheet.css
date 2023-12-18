@@ -1,0 +1,11 @@
+﻿navbar  {
+    align-items :center ;
+    display :flex ;
+   
+
+}
+search {
+    align-content: center;
+    width: 800px;
+    height: auto;
+}

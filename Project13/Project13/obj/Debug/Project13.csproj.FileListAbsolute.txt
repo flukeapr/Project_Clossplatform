@@ -209,8 +209,8 @@ E:\project13\Project_Clossplatform.git\Project13\Project13\bin\Microsoft.Owin.Se
 E:\project13\Project_Clossplatform.git\Project13\Project13\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\project13\Project_Clossplatform.git\Project13\Project13\bin\Microsoft.Owin.Security.OAuth.xml
 E:\project13\Project_Clossplatform.git\Project13\Project13\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\project13\Project_Clossplatform.git\Project13\Project13\obj\Debug\Project13.csproj.AssemblyReference.cache
 E:\project13\Project_Clossplatform.git\Project13\Project13\obj\Debug\Project13.csproj.CoreCompileInputs.cache
 E:\project13\Project_Clossplatform.git\Project13\Project13\obj\Debug\Project13.csproj.CopyComplete
 E:\project13\Project_Clossplatform.git\Project13\Project13\obj\Debug\Project13.dll
 E:\project13\Project_Clossplatform.git\Project13\Project13\obj\Debug\Project13.pdb
+E:\project13\Project_Clossplatform.git\Project13\Project13\obj\Debug\Project13.csproj.AssemblyReference.cache

@@ -16,6 +16,8 @@ namespace Project13
         private Entities2 db = new Entities2();
 
         // GET: Books
+       
+
         public ActionResult Index()
         {
             return View(db.Books.ToList());

@@ -11,10 +11,22 @@ namespace Project13.Controllers
     public class HomeController : Controller
     {
         private Entities2 db = new Entities2();
-        public ActionResult Index()
+        public ViewResult Index(string Searchstring)
         {
-            return View(db.Books.ToList());
+            var book = from p in db.Books
+                       select p;
+            if (!String.IsNullOrEmpty(Searchstring))
+            {
+                book = book.Where(p => p.Book_Name.Contains(Searchstring));
+            }
+
+            return View(book);
         }
+        
+
+
+
+
         public ActionResult Details(int? id)
         {
             if (id == null)

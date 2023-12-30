@@ -3,32 +3,76 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @*<link href="@Url.Content("~/Content/StyleSheet.css")" rel="stylesheet" type="text/css" />*@
+
+
+    <style>
+        .navbar-fixed-top {
+            background: #5B584F;
+            display: flex;
+            justify-content: space-between;
+            width: 1900px;
+            height: 100px;
+            
+        }     
+        .login {
+            margin-top: 0;
+        }
+
+        .search {
+            display: flex;
+            position: absolute;
+            top: 30%;
+            left: 40%;
+            align-items: center;
+        }
+
+            .search input {
+                border-radius: 10px;
+                width: 300px;
+                height: 40px;
+                border: none;
+                
+            }
+            .search button {
+                height: 40px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+                
+            }
+    </style>
+
+
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <div class="logo">
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/Logo/logo.png" alt="Logo" />
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
+            @using ((Html.BeginForm()))
+            {
+                <div class="search ">
+                    @Html.TextBox("SearchString", null, new { @placeholder = "ค้นหาหนังสือ" })
+                    <button type="submit" value="Search"><box-icon name='search' color='#ffffff'></box-icon></button>
+                </div>
+                    }
+
+                <div class="login">
+                    @Html.Partial("_LoginPartial")
+                </div>
+
             </div>
         </div>
-    </div>
+    
 
 
     <div class="container body-content">
